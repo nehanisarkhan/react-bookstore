@@ -32,4 +32,5 @@ const reducer = (state = initialState, action) => {
 };
 
 const store = createStore(reducer); //making use of createStore method
-//reducer has initialState of the app which is required for the store to make state transition based in the action recieved
+//reducer has initialState of the app which is required for the store to make state transition based on the action recieved
+console.log('initiat state = ', store.getState()); //access to state
