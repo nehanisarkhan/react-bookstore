@@ -41,4 +41,4 @@ store.subscribe(() => console.log('updated state ', store.getState())); //Adds a
 const unsubscribe = store.dispatch(buyCake()); //allows state to be updated
 store.dispatch(buyCake());
 store.dispatch(buyCake());
-unsubscribe();
+unsubscribe(); //handles unregistering of listeners via the function returned by subscribe(listener)
