@@ -38,6 +38,7 @@ console.log('initiat state = ', store.getState()); //access to state
 
 store.subscribe(() => console.log('updated state ', store.getState())); //Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed. You may then call getState() to read the current state tree inside the callback.
 
+const unsubscribe = store.dispatch(buyCake()); //allows state to be updated
 store.dispatch(buyCake());
 store.dispatch(buyCake());
-store.dispatch(buyCake());
+unsubscribe();
